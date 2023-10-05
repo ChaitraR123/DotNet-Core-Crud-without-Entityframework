@@ -25,3 +25,22 @@ BEGIN
 	select * from Books
 END
 GO
+
+
+CREATE PROCEDURE Viewbookbyid
+@bookid int	
+AS
+BEGIN
+	select * from Books where BookId=@bookid
+END
+GO
+
+
+CREATE PROCEDURE Deletebookbyid
+@bookid int	
+AS
+BEGIN
+	delete Books where BookId=@bookid
+END
+GO
+
